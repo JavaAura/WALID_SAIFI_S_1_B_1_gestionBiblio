@@ -6,8 +6,8 @@ import java.time.LocalDate;
 public class Livre extends document{
 	private String isbn;
 
-    public Livre(String auteur, String titre, int nombreDePages, LocalDate dateDePublication, boolean etat, String isbn) {
-        super(auteur, titre, nombreDePages, dateDePublication, etat);
+    public Livre(String auteur, String titre, int nombreDePages, LocalDate dateDePublication, String isbn) {
+        super(auteur, titre, nombreDePages, dateDePublication, false);
         this.isbn = isbn;
     }
 
@@ -16,7 +16,7 @@ public class Livre extends document{
 	public void afficherDetails() {
 		System.out.println("-------------------------------------------------------");
 		System.out.println("-------------------------Livre-------------------------");
-		System.out.println("ID: " + this.getId()); 
+		System.out.println("ID: " + this.id); 
 		System.out.println("ISBN: "+ this.isbn + "\n");
 		System.out.println("Titre : "+ this.titre + "\n");
 		System.out.println("Date de publication : "+ this.dateDePublication + "\n");

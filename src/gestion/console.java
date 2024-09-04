@@ -98,7 +98,7 @@ public class console {
 			if (type == 1) {
 				System.out.println("ISBN :");
 				String isbn = scanner.nextLine();
-				Livre livre = new Livre(auteur, titre, nombreDePages, date, false, isbn);
+				Livre livre = new Livre(auteur, titre, nombreDePages, date,isbn);
 				bibliotheque.ajouterDocument(livre);
 			} else if (type == 2) {
 				System.out.print("Numéro : ");
@@ -120,20 +120,21 @@ public class console {
         System.out.print("ID du document à emprunter : ");
         int  id = scanner.nextInt();
 
-        bibliotheque.emprunterDocumment(id);
+        bibliotheque.emprunterDocument(id);
     }
 
     private void retournerDocument() {
 		Scanner scanner = new Scanner(System.in);
         System.out.print("ID du document à retourner : ");
-        String id = scanner.nextLine();
+        int  id = scanner.nextInt();
         bibliotheque.retournerDocument(id);
     }
 
     private void rechercherDocument() {
 		Scanner scanner = new Scanner(System.in);
         System.out.print("ID du document à rechercher : ");
-        String id = scanner.nextLine();
+        String   id = scanner.nextLine();
+
         bibliotheque.rechercherDocument(id);
     }
 
