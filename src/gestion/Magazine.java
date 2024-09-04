@@ -16,6 +16,8 @@ public class Magazine extends document {
         this.numero = numero;
     }
 
+
+    
     @Override
     public void afficherDetails() {
         System.out.println("--------------------------------------------------------");

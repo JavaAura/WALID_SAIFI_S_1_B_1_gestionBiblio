@@ -48,8 +48,18 @@ public class Bibliotheque {
         }
     }
 
-    public document rechercherDocument(String id) {
-        return documentMap.get(id);
+    public void rechercherDocument(int id) {
+       
+        String strId = String.valueOf(id);
+        document document = documentMap.get(strId);
+ 
+        if (document != null) {
+            System.out.println("Le document recherché est : ");
+            document.afficherDetails();
+        } else {
+            System.out.println("Le document n'est pas trouvé.");
+        }
     }
+    
 
 }

@@ -42,7 +42,7 @@ public class console {
                      afficherDetailsDocument();
                     break;
                 case 5:
-                    rechercherDocument();
+                    RechercherDocument();
                     break;
                 case 6:
                     System.out.println("Au revoir!");
@@ -117,7 +117,7 @@ public class console {
 
 	private void emprunterDocument() {
 		Scanner scanner = new Scanner(System.in);
-        System.out.print("ID du document à emprunter : ");
+        System.out.println("ID du document à emprunter : ");
         int  id = scanner.nextInt();
 
         bibliotheque.emprunterDocument(id);
@@ -125,15 +125,15 @@ public class console {
 
     private void retournerDocument() {
 		Scanner scanner = new Scanner(System.in);
-        System.out.print("ID du document à retourner : ");
+        System.out.println("ID du document à retourner : ");
         int  id = scanner.nextInt();
         bibliotheque.retournerDocument(id);
     }
 
-    private void rechercherDocument() {
+    private void RechercherDocument() {
 		Scanner scanner = new Scanner(System.in);
-        System.out.print("ID du document à rechercher : ");
-        String   id = scanner.nextLine();
+        System.out.println("ID du document à rechercher : ");
+        int  id = scanner.nextInt();
 
         bibliotheque.rechercherDocument(id);
     }
