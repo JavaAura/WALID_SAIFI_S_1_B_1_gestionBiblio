@@ -40,6 +40,16 @@ public class Livre extends document{
 	public void retourner(){
 		this.etat=false;
 	}
+
+
+	// Getters and Setters
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 	
 	
 }

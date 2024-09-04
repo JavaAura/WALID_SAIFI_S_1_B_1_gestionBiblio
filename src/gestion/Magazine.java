@@ -4,11 +4,6 @@ import java.time.LocalDate;
 
 public class Magazine extends document {
 
-    private String titre;
-    private LocalDate dateDePublication;
-    private int nombreDePages;
-    private String auteur;
-    private boolean etat;
     private int numero;
 
     public Magazine(String auteur, String titre, int nombreDePages, LocalDate dateDePublication, boolean etat, int numero) {
@@ -41,27 +36,14 @@ public class Magazine extends document {
     }
 
     // Getters
-    public String getTitre() {
-        return titre;
+    public int  getNumero() {
+        return this.numero ;
+
+    }
+    public void  SetNumero(int numero){
+        this.numero = numero;
     }
 
-    public LocalDate getDateDePublication() {
-        return dateDePublication;
-    }
-
-    public int getNombreDePages() {
-        return nombreDePages;
-    }
-
-    public String getAuteur() {
-        return auteur;
-    }
-
-    public boolean getEtat() {
-        return etat;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
+    
+    
 }
